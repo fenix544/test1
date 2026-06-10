@@ -1,7 +1,7 @@
 const API_URL = "http://13.60.12.198:8080/api/v1/offers";
 let currentPage = 0;
 const pageSize = 10;
-
+let asd = 0;
 document.addEventListener('DOMContentLoaded', () => {
     loadAdminOffers();
 });
