@@ -1,0 +1,8 @@
+#themeToggleBtn {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: transparent;
+    font-weight: bold;
+}

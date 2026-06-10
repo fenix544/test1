@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szczegóły oferty</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="scripts/theme.js"></script>
+</head>
+
+<body>
+    <nav class="main-navbar">
+        <div class="navbar-container">
+            <a href="home.html" class="navbar-logo">JobOffers</a>
+            <ul class="navbar-links">
+                <li><a href="home.html">Strona Główna</a></li>
+                <li><a href="admin.html">Panel Administratora</a></li>
+                <li><button id="themeToggleBtn">🌙 Ciemny</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="detailsMain">
+        <div class="loader-container" id="detailsLoader">
+            <p>Ładowanie szczegółów oferty...</p>
+            <div class="loader"></div>
+        </div>
+    </main>
+
+    <template id="detailsTemplate">
+        <div class="details-container">
+            <a href="home.html" class="back-btn">&larr; Wróć do listy ofert</a>
+
+            <div class="details-header">
+                <h1 class="details-title"></h1>
+                <div class="details-meta">
+                    <span class="company-meta">Firma: <strong></strong></span>
+                    <span class="location-meta">Lokalizacja: <strong></strong></span>
+                    <span class="date-meta">Dodano: <strong></strong></span>
+                    <span class="earnings-meta">Stawka miesięczna netto: <strong></strong></span>
+                </div>
+            </div>
+
+            <h2 class="details-description-title">Opis stanowiska:</h2>
+            <div class="details-description"></div>
+        </div>
+    </template>
+
+    <script src="scripts/details.js"></script>
+</body>
+
+</html>

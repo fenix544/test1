@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Administratora</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="scripts/theme.js"></script>
+</head>
+
+<body>
+    <nav class="main-navbar">
+        <div class="navbar-container">
+            <a href="home.html" class="navbar-logo">JobOffers</a>
+            <ul class="navbar-links">
+                <li><a href="home.html">Strona Główna</a></li>
+                <li><a href="admin.html">Panel Administratora</a></li>
+                <li><button id="themeToggleBtn">🌙 Ciemny</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h2 class="sidebar-logo">Admin Panel</h2>
+            <nav class="sidebar-nav">
+                <button onclick="showSection('listSection', this)" class="nav-btn active">Lista ofert</button>
+                <button onclick="showSection('formSection', this)" class="nav-btn">Dodaj ofertę</button>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <h1 class="pageTitle">Zarządzanie ofertami</h1>
+
+            <section id="listSection" class="admin-list-section">
+                <h2>Istniejące oferty</h2>
+                <div id="adminOffersList" class="offers-list"></div>
+
+                <div id="paginationControls" class="pagination-controls"></div>
+
+                <template id="offerCardTemplate">
+                    <div class="admin-offer-card">
+                        <div class="admin-offer-details">
+                            <h3 class="offer-title-company"></h3>
+                            <div class="admin-offer-meta">
+                                <span class="admin-offer-location"></span>
+                                <span class="admin-offer-earnings"></span>
+                            </div>
+                        </div>
+                        <div class="admin-offer-actions">
+                            <button class="btn-primary edit-btn">Edytuj</button>
+                            <button class="btn-danger delete-btn">Usuń</button>
+                        </div>
+                    </div>
+                </template>
+
+            </section>
+
+            <section id="formSection" class="admin-form-section d-none">
+                <h2 id="formTitle">Dodaj nową ofertę</h2>
+                <form id="offerForm">
+                    <input type="hidden" id="offerId">
+                    <input type="text" id="title" placeholder="Tytuł oferty" minlength="5" required>
+                    <input type="text" id="company" placeholder="Firma" minlength="2" required>
+                    <input type="number" id="earnings" placeholder="Zarobki (np. 15000)" min="1" required>
+                    <input type="text" id="location" placeholder="Lokalizacja" minlength="3" required>
+                    <textarea id="description" placeholder="Opis oferty" minlength="10" required></textarea>
+
+                    <button type="submit" class="btn-primary" id="saveButton">Zapisz ofertę</button>
+                    <button type="button" class="btn-secondary" onclick="cancelForm()">Anuluj</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background: #f4f7f9;
+    color: #2d3748;
+}
+
+.search-section {
+    padding: 20px 20px;
+    text-align: center;
+    background: #ffffff;
+    border-bottom: 1px solid #dce3e8;
+}
+
+.search-section p {
+    color: #393c41;
+    font-size: 1.15rem;
+}
+
+.sort-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-container label {
+    color: #718096;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+#sortSelect {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background-color: #fff;
+    color: #2d3748;
+    font-size: 0.9rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#sortSelect:hover {
+    border-color: #8808c2;
+}
+
+.search-title {
+    margin-bottom: 15px;
+}
+
+.search-term {
+    margin-top: 20px;
+    display: none;
+}
+
+.search-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    border: 1px solid #e2e8f0;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    outline: none;
+}
+
+.btn-primary {
+    background: #8808c2;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: #7405b4;
+}
+
+.btn-primary:disabled {
+    background: #a0aec0;
+    cursor: not-allowed;
+    transition: none;
+}
+
+main {
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.page-section {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-number-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.offers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.job-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+
+.job-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-color: #8808c2;
+}
+
+.job-details h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #1a202c;
+}
+
+.job-meta {
+    display: flex;
+    gap: 15px;
+    color: #718096;
+    font-size: 14px;
+}
+
+.salary {
+    text-align: right;
+}
+
+.salary-range {
+    display: block;
+    font-weight: 700;
+    color: #27ae60;
+    font-size: 1.1rem;
+}
+
+.salary-type {
+    font-size: 12px;
+    color: #a0aec0;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.loader {
+    margin: 20px;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #8808c2;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.error-container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    display: none;
+}
+
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main-navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8808c2;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #8808c2;
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navbar-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+    }
+
+    .search-input {
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+
+    }
+
+    .job-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .salary {
+        text-align: left;
+        width: 100%;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 10px;
+    }
+}
+
+html.dark-mode,
+html.dark-mode body {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+html.dark-mode .main-navbar,
+html.dark-mode .search-section,
+html.dark-mode .search-container,
+html.dark-mode .job-card,
+html.dark-mode #sortSelect,
+html.dark-mode .page-number-input {
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
+html.dark-mode .search-input {
+    background-color: transparent;
+    color: #e0e0e0;
+}
+
+html.dark-mode .navbar-logo,
+html.dark-mode .navbar-links a,
+html.dark-mode .job-details h2,
+html.dark-mode .search-section p,
+html.dark-mode .sort-container label,
+html.dark-mode .search-input::placeholder {
+    color: #e0e0e0;
+}
+
+html.dark-mode .job-meta,
+html.dark-mode .salary-type {
+    color: #aaa;
+}
+
+html.dark-mode #themeToggleBtn {
+    color: #e0e0e0;
+    border-color: #555;
+}
